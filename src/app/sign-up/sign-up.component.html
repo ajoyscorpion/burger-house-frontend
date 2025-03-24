@@ -1,0 +1,112 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="text-center">
+            <strong
+              >Sign<span style="color: rgb(255, 165, 0);">
+                 Up</span
+              ></strong
+            >
+          </h2>
+          <form [formGroup]="signUpForm" class="mt-4" (ngSubmit)="signUp()">
+            <!-- Name -->
+            <div class="mb-2">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                formControlName="name"
+              />
+            </div>
+
+            <!-- name validation -->
+            <div *ngIf="this.signUpForm.get('name')?.errors&&this.signUpForm.get('name')?.touched" class="text-danger">
+              Invalid Name
+            </div>
+
+            <!-- Email -->
+            <div class="mb-2">
+              <label for="email" class="form-label">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                aria-describedby="email"
+                formControlName="email"
+              />
+            </div>
+
+            <!-- email validation -->
+            <div *ngIf="this.signUpForm.get('email')?.errors&&this.signUpForm.get('email')?.touched" class="text-danger">
+              Invalid Email
+            </div>
+
+            <!-- Mobile -->
+            <div class="mb-2">
+              <label for="mobile" class="form-label">Mobile Number</label>
+              <input type="mobile" class="form-control" id="mobile" formControlName="mobile" name="mobile" />
+            </div>
+
+            <!-- mobile validation -->
+            <div *ngIf="this.signUpForm.get('mobile')?.errors&&this.signUpForm.get('mobile')?.touched" class="text-danger">
+              Inavalid Mobile Number
+            </div>
+
+
+            <!-- Password -->
+            <div class="mb-2">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" formControlName="password" name="password" />
+            </div>
+
+            <!-- password validation -->
+            <div *ngIf="this.signUpForm.get('password')?.errors&&this.signUpForm.get('password')?.touched" class="text-danger">
+              Invalid Password
+            </div>
+
+            <!-- Sign Up button -->
+            <div class="d-flex justify-content-center mt-4">
+              <button
+                value="signUp"
+                type="submit"
+                class="btn btn-outline-dark d-flex justify-content-center"
+              >
+                <strong
+                  >Sign<span
+                    style="color: rgb(255, 165, 0);"
+                  >
+                    Up</span
+                  ></strong
+                >
+              </button>
+            </div>
+            <div
+              class="d-flex flex-column justify-content-center align-items-center"
+            >
+              <p class="mt-4">Already have an account?</p>
+              <a
+                href="signIn"
+                class=""
+                style="text-decoration: none; color: black"
+                ><strong
+                  >Click<span
+                    style="color: rgb(255, 165, 0);"
+                  >
+                    Here !!!</span
+                  ></strong
+                ></a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4"></div>
+  </div>
+</div>

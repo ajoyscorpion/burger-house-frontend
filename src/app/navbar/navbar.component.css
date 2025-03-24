@@ -1,0 +1,16 @@
+.logo{
+    width: 130px;
+    height: 130px;
+}
+
+ .navbar-nav{
+    padding-left: 150px;
+    font-size: 17px;
+} 
+
+@media only screen and (max-width: 768px){
+    .navbar-nav{
+        padding-left: 0px;
+        font-size: 15px;
+    }  
+}

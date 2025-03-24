@@ -1,0 +1,40 @@
+.burgerCard{
+    width: 20rem;
+}
+.cardStarter{
+    width: 20rem;
+}
+.cardMojito{
+    width: 20rem;
+}
+.p{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 768px){
+    .burgerCard{
+        width: 14rem;
+    }
+    .cardMojito{
+        width: 14rem;
+    }
+    .cardStarter{
+        width: 14rem;
+    }
+    .cart{
+        margin-top: 17px;
+    }
+    .item{
+        font-weight: 550;
+    }
+    .clearcart{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .placeOrder{
+        margin-top: 10px;
+    }
+}
